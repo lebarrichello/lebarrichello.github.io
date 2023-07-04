@@ -1,4 +1,4 @@
-/* import React, { Component } from 'react';
+import React, { Component } from 'react';
 import '../styles/Header.css';
 
 class Header extends Component {
@@ -24,4 +24,3 @@ class Header extends Component {
 
 export default Header;
 
- */
