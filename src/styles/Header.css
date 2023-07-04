@@ -1,33 +1,84 @@
+/* Estilos gerais */
 * {
-  border:0;
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-
-.container__header {
-  background-color: #24204a;
-  color: #f4f6f7;
-  display:flex;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-.header__logo-name {
-  align-items: center;
-  background-color: lightgreen;
-  display: flex;
-}
-
-.header__navigation-links {
-  align-items: center;
-  background-color: coral;
-  display: flex; 
-  gap:2px;
-}
-
-.header__toogle-theme {
-  align-items: center;
-  background-color: plum;
-  display: flex;
-}
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container__header {
+    background-color: #24204a;
+    color: #f4f6f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  .header__logo-name {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__logo-name span {
+    color: #ddfa5b;
+  }
+  
+  .header__logo-name p {
+    margin: 5px;
+  }
+  
+  .header__navigation-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__navigation-links a {
+    color: #f4f6f7;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .header__toogle-theme {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilos para dispositivos móveis */
+  @media (max-width: 768px) {
+    .header__navigation-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: #24204a;
+      color: #f4f6f7;
+      padding: 10px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      gap:10px;
+    }
+  
+    .header__navigation-links.open {
+      display: flex;
+    }
+  }
+  
+  /* Estilos para telas maiores que 768px */
+  @media (min-width: 769px) {
+    .header__navigation-links {
+      display: flex !important;
+    }
+    
+    .header__hamburger-menu {
+      display: none;
+    }
+  }
+  
