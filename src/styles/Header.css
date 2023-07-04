@@ -1,0 +1,33 @@
+/* * {
+  border:0;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.container__header {
+  background-color: #24204a;
+  color: #f4f6f7;
+  display:flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.header__logo-name {
+  align-items: center;
+  background-color: lightgreen;
+  display: flex;
+}
+
+.header__navigation-links {
+  align-items: center;
+  background-color: coral;
+  display: flex; 
+  gap:2px;
+}
+
+.header__toogle-theme {
+  align-items: center;
+  background-color: plum;
+  display: flex;
+} */
