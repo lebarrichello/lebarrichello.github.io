@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
 import { RiMenuFill } from 'react-icons/ri';
+import { RxCross2 } from "react-icons/rx";
+import { MdDarkMode,MdLightMode } from "react-icons/md";
+
 import '../styles/Header.css';
 
 class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMenuOpen: false,
+      isMenuOpen: false, // Adicione este estado
       logoText: 'lebarrichello',
-      blinking: false
+      blinking: false,
+      isDarkMode: false 
     };
   }
 
   toggleMenu = () => {
     this.setState(prevState => ({
       isMenuOpen: !prevState.isMenuOpen
+    }));
+  };
+
+  toggleDarkMode = () => {
+    this.setState(prevState => ({
+      isDarkMode: !prevState.isDarkMode
     }));
   };
 
@@ -47,29 +57,33 @@ class Header extends Component {
   };
 
   render() {
-    const { isMenuOpen, logoText, blinking } = this.state;
+    const { isMenuOpen, logoText, blinking, isDarkMode } = this.state;
 
     return (
-      <header className="container__header">
+      <header className={`container__header ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+
         <div className="header__logo-name">
-          <span>{"<"}</span>
+          <h2>{"<"}</h2>
           <p className="logo-text">
             <span className={blinking ? 'blinking' : ''}>{logoText.charAt(0)}</span>
             <span className={blinking ? 'blinking' : ''}>{logoText.charAt(1)}</span>
             <span className={blinking ? 'blinking' : ''}>{logoText.charAt(2)}</span>
             {logoText.slice(3)}
           </p>
-          <span>{">"}</span>
+          <h2>{">"}</h2>
         </div>
         <nav className={`header__navigation-links ${isMenuOpen ? 'open' : ''}`}>
           <a href="#sobre">Sobre</a>
           <a href="#projetos">Projetos</a>
           <a href="#contato">Contato</a>
         </nav>
-        <div className="header__toogle-theme">light/dark theme </div>
-        <div className="header__hamburger-menu" onClick={this.toggleMenu}>
-          <RiMenuFill />
+        <div className="header__toggle-theme" onClick={this.toggleDarkMode}>
+        {isDarkMode ? <MdDarkMode /> : <MdLightMode /> }
         </div>
+        
+        <div className="header__hamburger-menu" onClick={this.toggleMenu}>
+          {this.state.isMenuOpen ? <RxCross2 /> : <RiMenuFill />}
+       </div>
       </header>
     );
   }
