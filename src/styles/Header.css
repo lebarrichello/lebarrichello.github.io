@@ -1,26 +1,4 @@
-/* Estilos gerais */
-* {
-    border: 0;
-    box-sizing: border-box;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-
-  /* Estilos para o modo LIGHT */
-.light-mode {
-  --background-color: #d0ceea;
-  --text-color: #24204a;
-}
-
-/* Estilos para o modo DARK */
-.dark-mode {
-  --background-color: #24204a;
-  --text-color: #f4f6f7;
-}
-  
-  .container__header {
+.container__header {
   background-color: var(--background-color); /* Usando variável CSS para a cor de fundo */
   color: var(--text-color); /* Usando variável CSS para a cor do texto */
   display: flex;
@@ -39,42 +17,64 @@
   }
   
   .header__logo-name h2 {
-    color: #ddfa5b;
+    color: var(--symbol-color);
   }
   
   .header__logo-name p {
     margin: 5px;
+    font-size: 1.5rem;
   }
-  
+
   .header__navigation-links {
     display: flex;
     align-items: center;
+    gap: 20px ;
   }
   
   .header__navigation-links a {
     color: var(--text-color);
     text-decoration: none;
     margin-right: 10px;
+    letter-spacing: 0.10em;
+    position: relative;
+    font-weight: 700;
   }
-  
-  .header__toogle-theme {
-    display: flex;
-    align-items: center;
-  }
+
+  .header__navigation-links a::after {
+    content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; /* Espessura da linha */
+  background-color: var(--symbol-color); /* Cor da linha */
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease; /* Duração da animação */
+}
+
+.header__navigation-links a:hover::after {
+  width: 90%;
+}
+
+
+
+.icon {
+  font-size: 1.4rem;
+}
   
   /* Estilos para dispositivos móveis */
   @media (max-width: 768px) {
     .header__navigation-links {
+      background-color: var(--background-color);
       display: none;
       flex-direction: column;
-      align-items: center;
+      justify-content: center;
       padding: 10px;
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
-      z-index: 999;
-      gap:10px;
+      gap:20px;
+      font-size: 1.4rem;
     }
   
     .header__navigation-links.open {
@@ -84,6 +84,7 @@
   
   /* Estilos para telas maiores que 768px */
   @media (min-width: 769px) {
+
     .header__navigation-links {
       display: flex !important;
     }

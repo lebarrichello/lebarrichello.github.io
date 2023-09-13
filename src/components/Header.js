@@ -73,16 +73,16 @@ class Header extends Component {
           <h2>{">"}</h2>
         </div>
         <nav className={`header__navigation-links ${isMenuOpen ? 'open' : ''}`}>
-          <a href="#sobre">Sobre</a>
-          <a href="#projetos">Projetos</a>
-          <a href="#contato">Contato</a>
+             <a href="#sobre">Sobre</a>
+             <a href="#projetos">Projetos</a>
+             <a href="https://linkedin.com/in/lebarrichello" target="_blank" rel="noreferrer">Contato</a>
         </nav>
         <div className="header__toggle-theme" onClick={this.toggleDarkMode}>
-        {isDarkMode ? <MdDarkMode /> : <MdLightMode /> }
+        {isDarkMode ? <MdDarkMode className="icon" /> : <MdLightMode className="icon"/> }
         </div>
         
         <div className="header__hamburger-menu" onClick={this.toggleMenu}>
-          {this.state.isMenuOpen ? <RxCross2 /> : <RiMenuFill />}
+          {this.state.isMenuOpen ? <RxCross2 className="icon"/> : <RiMenuFill className="icon"/>}
        </div>
       </header>
     );

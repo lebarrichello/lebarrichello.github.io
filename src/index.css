@@ -1,5 +1,36 @@
-body {
+
+/* Estilos gerais */
+* { 
+  border: 0;
+  box-sizing: border-box;
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+
+/* Estilos para o modo LIGHT */
+.light-mode {
+--background-color: #fdfbf4;
+--text-color: #24204a;
+--symbol-color: #ff4542;
+
+}
+
+/* Estilos para o modo DARK */
+.dark-mode {
+--background-color: #24204a;
+--text-color: #f4f6f7;
+--symbol-color: #ddfa5b;
+}
+
+
+
+
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  font:'Open Sans', arial, sans-serif;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
