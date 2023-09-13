@@ -1,9 +1,9 @@
 .container__header {
+  align-items: center;
   background-color: var(--background-color); /* Usando variável CSS para a cor de fundo */
   color: var(--text-color); /* Usando variável CSS para a cor do texto */
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 20px;
   position: fixed;
   top: 0;
@@ -11,76 +11,76 @@
   z-index: 999;
 }
   
-  .header__logo-name {
-    display: flex;
-    align-items: center;
-  }
-  
-  .header__logo-name h2 {
-    color: var(--symbol-color);
-  }
-  
-  .header__logo-name p {
-    margin: 5px;
-    font-size: 1.5rem;
-  }
+.header__logo-name {
+  align-items: center;
+  display: flex;
+}
 
-  .header__navigation-links {
-    display: flex;
-    align-items: center;
-    gap: 20px ;
-  }
+.header__logo-name h2 {
+  color: var(--symbol-color);
+}
   
-  .header__navigation-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin-right: 10px;
-    letter-spacing: 0.10em;
-    position: relative;
-    font-weight: 700;
-  }
+.header__logo-name p {
+  font-size: 1.5rem;
+  margin: 5px;
+}
 
-  .header__navigation-links a::after {
-    content: '';
-  position: absolute;
-  width: 0;
-  height: 2px; /* Espessura da linha */
+.header__navigation-links {
+  align-items: center;
+  display: flex;
+  gap: 20px ;
+}
+  
+.header__navigation-links a {
+  color: var(--text-color);
+  letter-spacing: 0.10em;
+  font-weight: 700;
+  margin-right: 10px;
+  position: relative;
+  text-decoration: none;
+}
+
+.header__navigation-links a::after {
   background-color: var(--symbol-color); /* Cor da linha */
   bottom: -4px;
+  content: '';
+  height: 2px; /* Espessura da linha */
   left: 0;
+  position: absolute;
   transition: width 0.3s ease; /* Duração da animação */
+  width: 0;
+
 }
 
 .header__navigation-links a:hover::after {
-  width: 90%;
+  width: 100%;
 }
-
-
 
 .icon {
   font-size: 1.4rem;
 }
   
   /* Estilos para dispositivos móveis */
-  @media (max-width: 768px) {
-    .header__navigation-links {
-      background-color: var(--background-color);
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      padding: 10px;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      gap:20px;
-      font-size: 1.4rem;
-    }
+@media (max-width: 768px) {
+
+  .header__navigation-links {
+    background-color: var(--background-color);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    gap:20px;
+    font-size: 1.4rem;
+ }
   
-    .header__navigation-links.open {
-      display: flex;
+   .header__navigation-links.open {
+    display: flex;
     }
-  }
+}
   
   /* Estilos para telas maiores que 768px */
   @media (min-width: 769px) {

@@ -1,0 +1,60 @@
+/* Estilos para o modo LIGHT */
+.light-mode{
+  --background-color: #fdfbf4;
+  --text-color: #24204a;
+  --symbol-color: #ff4542;
+
+}
+    
+/* Estilos para o modo DARK */
+.dark-mode {
+  --background-color: #24204a;
+  --text-color: #f4f6f7;
+  --symbol-color: #ddfa5b;
+}
+
+
+footer {
+  align-items: center;
+  background-color: var(--background-color);
+  bottom: 0;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  left: 0;
+  padding: 30px 30px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+}
+  
+.container_icons {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+  
+.social-icon {
+  align-items: center;
+  border: 2px solid var(--symbol-color);
+  border-radius: 50%;
+  color: var(--symbol-color);
+  display: flex;
+  font-size: 2rem;
+  height: 48px;
+  justify-content: center;
+  padding: 12px;
+  transition: 0.3s;
+  width: 48px;
+}
+
+.icon-name {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+}
+  
+  
