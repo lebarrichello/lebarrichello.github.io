@@ -1,0 +1,36 @@
+.light-mode {
+  --background-color: #fdfbf4;
+  --background-color2: #fefdfa;
+  --text-color: #24204a;
+  --symbol-color: #ff4542;
+}
+
+/* Estilos para o modo DARK */
+.dark-mode {
+  --background-color: #24204a;
+  --background-color2: #2c275b;
+  --text-color: #f4f6f7;
+  --symbol-color: #ddfa5b;
+}
+
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+
+
+.section_projects h2{
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+.section_projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

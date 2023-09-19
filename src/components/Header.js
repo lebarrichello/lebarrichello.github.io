@@ -50,8 +50,8 @@ function Header() {
         <h2>{">"}</h2>
       </div>
       <nav className={`header__navigation-links ${isMenuOpen ? 'open' : ''}`}>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
+        <a href="/about">Sobre</a>
+        <a href="/project">Projetos</a>
         <a href="https://linkedin.com/in/lebarrichello" target="_blank" rel="noreferrer">
           Contato
         </a>
@@ -60,7 +60,7 @@ function Header() {
         {isDarkMode ? <MdDarkMode className="icon" /> : <MdLightMode className="icon" />}
       </div>
       <div className="header__hamburger-menu" onClick={toggleMenu}>
-        {isMenuOpen ? <RxCross2 /> : <RiMenuFill />}
+        {isMenuOpen ? <RxCross2 className="icon" /> : <RiMenuFill className="icon" />}
       </div>
     </header>
   );

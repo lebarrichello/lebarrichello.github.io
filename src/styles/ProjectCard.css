@@ -1,0 +1,149 @@
+/* Estilos para o modo LIGHT */
+.light-mode {
+  --background-color: #f7f7fb;
+  --background-color2: #eae9f6;
+  --text-color: #24204a;
+  --symbol-color: #ff4542;
+  --opacity-color:rgba(255, 69, 66, 0.5);
+
+}
+
+/* Estilos para o modo DARK */
+.dark-mode {
+  --background-color: #24204a;
+  --background-color2: #2c275b;
+  --text-color: #f4f6f7;
+  --symbol-color: #ddfa5b;
+  --opacity-color:rgba(221, 250, 91, 0.5);
+}
+
+
+.project-card {
+    background-color: var(--background-color2);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    flex: 0 0 328px;
+    max-width: calc(50% - 16px);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card:hover {
+    box-shadow: 0 14px 28px rgb(54 0 91 / 25%), 0 10px 10px rgb(68 0 107 / 22%);
+  }
+  
+  
+  .project-img-container {
+    position: relative;
+    height: 240px;
+  }
+  
+  .project-preview {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .project-header {
+     color: var(--text-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .project-header h3:hover{
+   text-decoration: none;
+ }
+
+
+  .project-header a::after {
+    background-color: var(--symbol-color); /* Cor da linha */
+    bottom: -4px;
+    content: '';
+    height: 2px; /* Espessura da linha */
+    left: 0;
+    position: absolute;
+    transition: width 0.3s ease; /* Duração da animação */
+    width: 0;
+  
+  }
+  
+  .project-header a:hover::after {
+    width: 20%;
+  }
+  
+
+  .project-icons {
+    color: var(--symbol-color);
+    position: absolute;
+    display: flex;
+    gap: 12px;
+    right: 0;
+  }
+  
+  .project-info {
+    padding: 16px 32px 32px;
+  }
+  
+  .project-info p {
+    color: var(--text-color);
+    line-height: 1.6rem;
+  }
+  
+  .project-tools-container {
+    background-color:var(--opacity-color);
+    position: absolute;
+    display: flex;
+    padding: 8px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .project-tool-badge {
+    border-radius: 6px;
+  }
+  
+  .project-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  @media screen and (max-width: 1144px) {
+    .project-card {
+      flex: 1 0 328px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .project-card {
+      max-width: unset;
+    }
+  
+    .project-img-container {
+      min-height: 300px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .project-card {
+      flex: 1 0 260px;
+    }
+  
+    .project-info {
+      padding: 16px 24px 24px;
+    }
+  }
+  

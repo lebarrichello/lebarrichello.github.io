@@ -36,6 +36,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+a {
+  color: inherit; /* Herda a cor do elemento pai (normalmente preto) */
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+/* Estilizar links quando o mouse passa por cima (opcional) */
+a:hover {
+  color: var(--symbol-color); /* Defina a cor que você deseja quando o mouse passa por cima */
+  text-decoration: underline; /* Adicione um sublinhado quando o mouse passa por cima (opcional) */
 }
 
 code {
