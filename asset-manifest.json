@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/portfolio-lebarrichello/static/css/main.ad18cc77.css",
+    "main.js": "/portfolio-lebarrichello/static/js/main.353ee457.js",
+    "static/js/787.90aaed73.chunk.js": "/portfolio-lebarrichello/static/js/787.90aaed73.chunk.js",
+    "static/media/octocat3.png": "/portfolio-lebarrichello/static/media/octocat3.77e48cea47d06eff972e.png",
+    "static/media/trybe-tunes.png": "/portfolio-lebarrichello/static/media/trybe-tunes.494f8a525566ad4d963f.png",
+    "static/media/octocat4.png": "/portfolio-lebarrichello/static/media/octocat4.9df9c2335542a8c09357.png",
+    "static/media/solar-system.png": "/portfolio-lebarrichello/static/media/solar-system.3f6797eacf527dd3c8f6.png",
+    "static/media/trivia-trybe.png": "/portfolio-lebarrichello/static/media/trivia-trybe.de84edad36bdc274eb40.png",
+    "static/media/app-receitas.png": "/portfolio-lebarrichello/static/media/app-receitas.3926bed7f70810a2cf0d.png",
+    "static/media/pixels-art.png": "/portfolio-lebarrichello/static/media/pixels-art.36d3abd17c8525771fd9.png",
+    "index.html": "/portfolio-lebarrichello/index.html",
+    "main.ad18cc77.css.map": "/portfolio-lebarrichello/static/css/main.ad18cc77.css.map",
+    "main.353ee457.js.map": "/portfolio-lebarrichello/static/js/main.353ee457.js.map",
+    "787.90aaed73.chunk.js.map": "/portfolio-lebarrichello/static/js/787.90aaed73.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad18cc77.css",
+    "static/js/main.353ee457.js"
+  ]
+}
