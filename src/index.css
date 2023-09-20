@@ -44,10 +44,9 @@ a {
   text-decoration: none; /* Remove o sublinhado dos links */
 }
 
-/* Estilizar links quando o mouse passa por cima (opcional) */
 a:hover {
-  color: var(--symbol-color); /* Defina a cor que você deseja quando o mouse passa por cima */
-  text-decoration: underline; /* Adicione um sublinhado quando o mouse passa por cima (opcional) */
+/* Defina a cor que você deseja quando o mouse passa por cima */
+  text-decoration: none; 
 }
 
 code {

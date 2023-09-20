@@ -19,6 +19,8 @@
   justify-content: center;
   gap: 32px;
   flex-wrap: wrap;
+  margin-right: 2%;
+  margin-left: 2%;
 }
 
 

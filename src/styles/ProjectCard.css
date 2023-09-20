@@ -1,25 +1,21 @@
 /* Estilos para o modo LIGHT */
 .light-mode {
-  --background-color: #f7f7fb;
-  --second-shade: #AD6F92;
-  --text-color: #24204a;
-  --symbol-color: #ff4542;
-  --accent-color:#AD6F92;
+--background-card:#24204a;
+--color-text-card:#fdfbf4;
+--color-links-card:#ddfa5b;
 
 }
 
 /* Estilos para o modo DARK */
 .dark-mode {
-  --background-color: #24204a;
-  --second-shade: #131225;
-  --text-color: #f4f6f7;
-  --symbol-color: #ddfa5b;
-  --accent-color:#AD6F92;
+--background-card:#131225;
+--color-text-card:#fdfbf4;
+--color-links-card:#ddfa5b;
 }
 
 
 .project-card {
-    background-color: var(--second-shade);
+    background-color: var(--background-card);
     border-radius: 8px;
     box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -48,20 +44,16 @@
   }
   
   .project-header {
-     color: var(--text-color);
+    color:var(--color-text-card);
     position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 8px;
   }
 
-  .project-header h3:hover{
-   text-decoration: none;
- }
-
 
   .project-header a::after {
-    background-color: var(--symbol-color); /* Cor da linha */
+    background-color: var(--color-links-card); /* Cor da linha */
     bottom: -4px;
     content: '';
     height: 2px; /* Espessura da linha */
@@ -78,24 +70,31 @@
   
 
   .project-icons {
-    color: var(--symbol-color);
+    color: var(--color-links-card);
     position: absolute;
     display: flex;
-    gap: 12px;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
     right: 0;
   }
+
+  .project-icons a::after {
+   text-decoration: none;
+  }
+  
   
   .project-info {
     padding: 16px 32px 32px;
   }
   
   .project-info p {
-    color: var(--text-color);
+    color: var(--color-text-card);
     line-height: 1.6rem;
   }
   
   .project-tools-container {
-    background-color:var(--accent-color);
+    background-color:var(--background-card);
     position: absolute;
     display: flex;
     padding: 8px;

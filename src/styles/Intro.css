@@ -15,16 +15,35 @@
 
 .container__about {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
 .container__about-infos {
   max-width: 600px; /* Defina a largura máxima desejada para telas menores */
 }
 
+.image-draw  {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
 .image-draw img {
   height: 700px;
   width: 700px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 #about {
@@ -109,12 +128,7 @@
   
 
   @media screen and (max-width: 768px) {
-  
-    .image-draw  {
-     display: none;
-    }
-    
-   
+
     .info-name,
     .info-skills {
       font-size: 2.2rem;
@@ -124,6 +138,17 @@
     .info-text {
       font-size: 1.1rem;
     }
+
+    #about {
+    flex-direction: column-reverse;
+    }
+
+    .image-draw img {
+      height: 250px;
+      width: 250px;
+      margin-top: 10%;
+    }
+    
   
   }
   

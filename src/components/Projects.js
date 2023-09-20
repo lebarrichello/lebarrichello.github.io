@@ -7,7 +7,7 @@ import '../styles/Projects.css';
 class Projects extends Component {
   render() { 
     return (
-      <section className="section_projects" >
+      <section id="#projects" className="section_projects" >
         <h2>Projetos</h2>
         <div className="projects-container">
           {projects.map((item) => {

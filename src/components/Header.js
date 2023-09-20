@@ -21,8 +21,8 @@ function Header() {
     }, 20000);
 
     return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   const addLetterT = () => {
     if (!logoText.includes('t')) {
       setLogoText(logoText.slice(0, 2) + 't' + logoText.slice(2));
@@ -50,14 +50,14 @@ function Header() {
         <h2>{">"}</h2>
       </div>
       <nav className={`header__navigation-links ${isMenuOpen ? 'open' : ''}`}>
-        <a href="/about">Sobre</a>
-        <a href="/project">Projetos</a>
+        <a href="#about">Sobre</a>
+        <a href="#projects">Projetos</a>
         <a href="https://linkedin.com/in/lebarrichello" target="_blank" rel="noreferrer">
           Contato
         </a>
       </nav>
       <div className="header__toggle-theme" onClick={toggleDarkMode}>
-        {isDarkMode ? <MdDarkMode className="icon" /> : <MdLightMode className="icon" />}
+        {isDarkMode ? <MdLightMode  className="icon" /> : <MdDarkMode className="icon" />}
       </div>
       <div className="header__hamburger-menu" onClick={toggleMenu}>
         {isMenuOpen ? <RxCross2 className="icon" /> : <RiMenuFill className="icon" />}

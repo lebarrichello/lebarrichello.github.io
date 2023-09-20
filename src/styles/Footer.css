@@ -9,7 +9,7 @@
 /* Estilos para o modo DARK */
 .dark-mode {
   --background-color: #24204a;
-  --text-color: #f4f6f7;
+  --text-color: #24204a;
   --symbol-color: #ddfa5b;
 }
 

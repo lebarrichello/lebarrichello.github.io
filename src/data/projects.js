@@ -12,6 +12,7 @@ export const projects = [
     skills: ['react', 'testing-library', 'javascript', 'html5', 'css3'],
     githubLink: `https://github.com/lebarrichello/recipes-app`,
     previewLink: `https://recipes-app-pi-lake.vercel.app/`,
+    slug:'github',
   },
   
 
@@ -22,6 +23,7 @@ export const projects = [
     skills: ['react', 'redux', 'javascript', 'html5', 'css3'],
     githubLink: `https://github.com/lebarrichello/project-trivia-react-redux`,
     previewLink: `https://project-trivia-react-redux-lebarrichello.vercel.app/`,
+    slug:'github',
   },
   
   {
@@ -31,6 +33,7 @@ export const projects = [
     skills: ['react', 'javascript', 'css3'],
     githubLink: `https://github.com/lebarrichello/trybetunes-lebarrichello`,
     previewLink: `https://trybetunes-lebarrichello.vercel.app/#/`,
+    slug:'github',
   },
   
   {
@@ -40,6 +43,7 @@ export const projects = [
     skills: ['react', 'javascript', 'html5', 'css3'],
     githubLink: `https://github.com/lebarrichello/solar-system-lebarrichello`,
     previewLink: `https://solar-system-lebarrichello.vercel.app/`,
+    slug:'github',
   },
   {
     title: 'Pixels Art',
@@ -48,5 +52,6 @@ export const projects = [
     skills: ['javascript', 'html5', 'css3'],
     githubLink: `https://github.com/lebarrichello/pixel-art-lebarrichello`,
     previewLink: `https://pixel-art-lebarrichello.vercel.app/`,
+    slug:'github',
   },
 ];
