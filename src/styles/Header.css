@@ -3,21 +3,21 @@
   --background-header-color: #f4f6f7;
   --text-header-color: #24204a;
   --accent-header-color: #ff4542;
-  
-  }
-  
-  /* Estilos para o modo DARK */
-  .dark-mode {
+
+}
+
+/* Estilos para o modo DARK */
+.dark-mode {
   --background-header-color: #24204a;
   --text-header-color: #f4f6f7;
   --accent-header-color: #ddfa5b;
-  }
-  
+}
+
 
 .container__header {
   align-items: center;
-  background-color: var(--background-header-color);  
-  color: var(--accent-header-color); /* Usando variável CSS para a cor do texto */
+  background-color: var(--background-header-color);
+  color: var(--accent-header-color);
   display: flex;
   font-size: 1.4rem;
   justify-content: space-between;
@@ -27,17 +27,17 @@
   width: 100%;
   z-index: 999;
 }
-  
+
 .header__logo-name {
-  color: var(--text-header-color);
   align-items: center;
+  color: var(--text-header-color);
   display: flex;
 }
 
 .header__logo-name h2 {
   color: var(--accent-header-color);
 }
-  
+
 .header__logo-name p {
   font-size: 1.5rem;
   margin: 5px;
@@ -46,54 +46,20 @@
 .header__navigation-links {
   align-items: center;
   display: flex;
-  gap: 20px ;
-}
-  
-.header__navigation-links a {
-  color: var(--text-header-color);
-  letter-spacing: 0.10em;
-  font-weight: 700;
-  margin-right: 10px;
-  position: relative;
-  text-decoration: none;
+  gap: 20px;
 }
 
-.header__navigation-links a {
-  color: var(--text-header-color);
-  letter-spacing: 0.10em;
-  font-weight: 700;
-  margin-right: 10px;
-  position: relative;
-  text-decoration: none;
-}
-
-.header__navigation-links a::after {
-  background-color: var(--accent-header-color); /* Cor da linha */
-  bottom: -4px;
-  content: '';
-  height: 2px; /* Espessura da linha */
-  left: 0;
-  position: absolute;
-  transition: width 0.3s ease; /* Duração da animação */
-  width: 0;
-
-}
-
-.header__navigation-links a:hover::after {
-  width: 100%;
-}
-/* Use a mesma classe para estilizar os botões */
 .header__navigation-links button {
-  color: var(--text-header-color);
-  letter-spacing: 0.10em;
-  font-weight: 900;
-  margin-right: 10px;
-  position: relative;
-  text-decoration: none;
   background: none;
   border: none;
-  cursor: pointer; /* Defina o cursor como apontador para indicar que é clicável */
+  color: var(--text-header-color);
+  cursor: pointer;
   font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.10em;
+  margin-right: 10px;
+  position: relative;
+  text-decoration: none;
 }
 
 /* Estilos para o efeito de linha */
@@ -112,62 +78,91 @@
 .header__navigation-links button:hover::after {
   width: 100%;
 }
-.icon {
-  font-size: 1.4rem;
-  cursor: pointer;
+
+.header__navigation-links a {
+  color: var(--text-header-color);
+  letter-spacing: 0.10em;
+  font-weight: 700;
+  margin-right: 10px;
+  position: relative;
+  text-decoration: none;
+}
+
+.header__navigation-links a::after {
+  background-color: var(--accent-header-color);
+  /* Cor da linha */
+  bottom: -4px;
+  content: '';
+  height: 2px;
+  /* Espessura da linha */
+  left: 0;
+  position: absolute;
+  transition: width 0.3s ease;
+  /* Duração da animação */
+  width: 0;
+
+}
+
+.header__navigation-links a:hover::after {
+  width: 100%;
 }
 
 .header__toggle-theme .icon {
   color: var(--text-header-color);
 }
-  
-  /* Estilos para dispositivos móveis */
+
+.icon {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
 
   .header__navigation-links {
     background-color: var(--background-header-color);
     display: none;
     flex-direction: column;
+    gap: 20px;
     justify-content: center;
+    left: 0;
     padding: 10px;
     position: absolute;
     top: 100%;
-    left: 0;
     width: 100%;
-    gap:20px;
+  }
 
- }
-  
-   .header__navigation-links.open {
+  .header__navigation-links.open {
     display: flex;
-    }
+  }
 }
-  
-  /* Estilos para telas maiores que 768px */
-  @media (min-width: 769px) {
 
-    .header__navigation-links {
-      display: flex !important;
-    }
-    
-    .header__hamburger-menu {
-      display: none;
-    }
+/* Estilos para telas maiores que 768px */
+@media (min-width: 769px) {
+
+  .header__navigation-links {
+    display: flex !important;
   }
-  
-  .blinking {
-    animation: blink 1s infinite;
+
+  .header__hamburger-menu {
+    display: none;
   }
-  
-  @keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+}
+
+.blinking {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
   }
-  
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
