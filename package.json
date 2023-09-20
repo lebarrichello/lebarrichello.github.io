@@ -2,7 +2,7 @@
   "name": "portifolio-lebarrichello",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lebarrichello.github.io/portfolio-lebarrichello",
+  "homepage": "https://lebarrichello.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
