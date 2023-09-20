@@ -1,7 +1,23 @@
+/* Estilos para o modo LIGHT */
+.light-mode {
+  --background-header-color: #f4f6f7;
+  --text-header-color: #24204a;
+  --accent-header-color: #ff4542;
+  
+  }
+  
+  /* Estilos para o modo DARK */
+  .dark-mode {
+  --background-header-color: #24204a;
+  --text-header-color: #f4f6f7;
+  --accent-header-color: #ddfa5b;
+  }
+  
+
 .container__header {
   align-items: center;
-  background-color: var(--background-color); /* Usando variável CSS para a cor de fundo */
-  color: var(--text-color); /* Usando variável CSS para a cor do texto */
+  background-color: var(--background-header-color);  
+  color: var(--accent-header-color); /* Usando variável CSS para a cor do texto */
   display: flex;
   font-size: 1.4rem;
   justify-content: space-between;
@@ -13,12 +29,13 @@
 }
   
 .header__logo-name {
+  color: var(--text-header-color);
   align-items: center;
   display: flex;
 }
 
 .header__logo-name h2 {
-  color: var(--symbol-color);
+  color: var(--accent-header-color);
 }
   
 .header__logo-name p {
@@ -33,7 +50,16 @@
 }
   
 .header__navigation-links a {
-  color: var(--text-color);
+  color: var(--text-header-color);
+  letter-spacing: 0.10em;
+  font-weight: 700;
+  margin-right: 10px;
+  position: relative;
+  text-decoration: none;
+}
+
+.header__navigation-links a {
+  color: var(--text-header-color);
   letter-spacing: 0.10em;
   font-weight: 700;
   margin-right: 10px;
@@ -42,7 +68,7 @@
 }
 
 .header__navigation-links a::after {
-  background-color: var(--symbol-color); /* Cor da linha */
+  background-color: var(--accent-header-color); /* Cor da linha */
   bottom: -4px;
   content: '';
   height: 2px; /* Espessura da linha */
@@ -56,17 +82,50 @@
 .header__navigation-links a:hover::after {
   width: 100%;
 }
+/* Use a mesma classe para estilizar os botões */
+.header__navigation-links button {
+  color: var(--text-header-color);
+  letter-spacing: 0.10em;
+  font-weight: 900;
+  margin-right: 10px;
+  position: relative;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer; /* Defina o cursor como apontador para indicar que é clicável */
+  font-size: 1.4rem;
+}
 
+/* Estilos para o efeito de linha */
+.header__navigation-links button::after {
+  background-color: var(--accent-header-color);
+  bottom: -4px;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transition: width 0.3s ease;
+  width: 0;
+}
+
+/* Estilos quando o botão é hover */
+.header__navigation-links button:hover::after {
+  width: 100%;
+}
 .icon {
   font-size: 1.4rem;
   cursor: pointer;
+}
+
+.header__toggle-theme .icon {
+  color: var(--text-header-color);
 }
   
   /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
 
   .header__navigation-links {
-    background-color: var(--background-color);
+    background-color: var(--background-header-color);
     display: none;
     flex-direction: column;
     justify-content: center;
