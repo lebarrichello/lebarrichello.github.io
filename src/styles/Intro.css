@@ -1,0 +1,153 @@
+.light-mode {
+  --background-color: #fdfbf4;
+  --background-color2: #fefdfa;
+  --text-color: #24204a;
+  --symbol-color: #ff4542;
+}
+
+/* Estilos para o modo DARK */
+.dark-mode {
+  --background-color: #24204a;
+  --background-color2: #2c275b;
+  --text-color: #f4f6f7;
+  --symbol-color: #ddfa5b;
+}
+
+.container__about {
+  display: flex;
+  flex-direction: column;
+}
+
+.container__about-infos {
+  max-width: 600px; /* Defina a largura máxima desejada para telas menores */
+}
+
+.image-draw img {
+  height: 700px;
+  width: 700px;
+}
+
+#about {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+  min-height: 100vh;
+  position: relative;
+  padding: 70px 48px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Adicione esta linha para quebrar os elementos em várias linhas */
+}
+  
+ 
+  .info-header {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 8px;
+  }
+
+  .info-name {
+    color: var(--text-color);
+    margin-bottom: 8px;
+  }
+  
+  
+  .info-name,
+  .info-skills {
+    font-size: 2.7rem;
+    font-weight: 700;
+  }
+  
+
+  .info-skills {
+    color: var(--symbol-color);
+  }
+  
+  .info-text {
+    margin: 16px 0 48px;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+  
+  .trybe-link {
+    color: var(--symbol-color);
+    transition: color 0.2s;
+  }
+  
+
+  .trybe-link:hover {
+    color: var(--symbol-color);
+  }
+
+  
+  .image-draw {
+    position: relative;
+  }
+
+  .container__tools {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 32px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tool-badge {
+    border-radius: 6px;
+  }
+  
+  
+
+  @media screen and (max-width: 768px) {
+  
+    .image-draw  {
+     display: none;
+    }
+    
+   
+    .info-name,
+    .info-skills {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+  
+    .info-text {
+      font-size: 1.1rem;
+    }
+  
+  }
+  
+  @media screen and (max-width: 320px) {
+    #about {
+      padding: 70px 24px;
+    }
+  
+    .info-header {
+      font-size: 1rem;
+    }
+  
+    .info-name,
+    .info-skills {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+  
+    .info-text {
+      font-size: 1rem;
+    }
+  }
+
+  .teste {
+    display: flex;
+    flex-direction: column;
+  }

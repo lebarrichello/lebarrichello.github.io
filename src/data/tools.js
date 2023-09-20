@@ -55,6 +55,18 @@ export const tools = [
       color: 'white',
     },
     {
+      slug: 'sass',
+      text: 'Sass',
+      background: 'DB7093',
+      color: 'white',
+    },
+    {
+      slug: 'bootstrap',
+      text: 'Bootstrap',
+      background: '764ABC',
+      color: 'white',
+    },
+    {
       slug: 'git',
       text: 'git',
       background: 'F05032',
@@ -79,4 +91,5 @@ export const tools = [
       background: 'E33332',
       color: 'white',
     },
+   
   ];

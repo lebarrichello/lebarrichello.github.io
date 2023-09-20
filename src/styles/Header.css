@@ -3,6 +3,7 @@
   background-color: var(--background-color); /* Usando variável CSS para a cor de fundo */
   color: var(--text-color); /* Usando variável CSS para a cor do texto */
   display: flex;
+  font-size: 1.4rem;
   justify-content: space-between;
   padding: 20px;
   position: fixed;
@@ -75,7 +76,7 @@
     left: 0;
     width: 100%;
     gap:20px;
-    font-size: 1.4rem;
+
  }
   
    .header__navigation-links.open {
