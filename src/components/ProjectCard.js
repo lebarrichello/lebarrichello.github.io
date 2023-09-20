@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import { tools } from '../data/tools';
 import ToolBadge from './ToolBadge';
 import { useDarkMode } from '../context/DarkModeContext';
 import '../styles/ProjectCard.css';
 
 function ProjectCard(props) {
-  const { title, image, description, skills, githubLink, previewLink } = props;
+  const { title, image, description, skills, source, demo } = props;
   const [wasMouseOver, setWasMouseOver] = useState(false);
   const { isDarkMode } = useDarkMode();
 
@@ -48,16 +48,16 @@ function ProjectCard(props) {
 
       <div className="project-info">
         <div className="project-header">
-          <a href={`${previewLink ? previewLink : githubLink}`} target="_blank" rel="noreferrer">
+          <a href={`${demo ? demo : source}`} target="_blank" rel="noreferrer">
             <h3>{title}</h3>
           </a>
           <div className="project-icons">
-            <a href={githubLink} target="_blank" rel="noreferrer">
-              <FaGithub />
+            <a href={source} target="_blank" rel="noreferrer">
+              <FiGithub />
             </a>
-            {previewLink && (
-              <a href={previewLink} target="_blank" rel="noreferrer">
-                <FaExternalLinkAlt />
+            {demo && (
+              <a href={demo} target="_blank" rel="noreferrer">
+                <FiExternalLink/>
               </a>
             )}
           </div>

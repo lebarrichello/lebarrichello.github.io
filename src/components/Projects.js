@@ -17,8 +17,8 @@ class Projects extends Component {
                 description={item.description}
                 image={item.image}
                 skills={item.skills}
-                githubLink={item.githubLink}
-                previewLink={item.previewLink}
+                source={item.source}
+                demo={item.demo}
                 key={item.title}
               />
             )

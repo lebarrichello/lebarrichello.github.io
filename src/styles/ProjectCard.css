@@ -82,6 +82,10 @@
   .project-icons a::after {
    text-decoration: none;
   }
+
+  .project-icons a::after:hover {
+    text-decoration: none;
+   }
   
   
   .project-info {

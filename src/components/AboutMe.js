@@ -4,7 +4,7 @@ import ToolBadge from '../components/ToolBadge';
 import { useDarkMode } from '../context/DarkModeContext';
 import octocat from '../images/octocat3.png'
 import octocat2 from '../images/octocat4.png'
-import '../styles/Intro.css';
+import '../styles/AboutMe.css';
 
 function AboutMe() {
   const { isDarkMode} = useDarkMode();
