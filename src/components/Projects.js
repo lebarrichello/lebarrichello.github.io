@@ -8,7 +8,7 @@ class Projects extends Component {
   render() { 
     return (
       <section id="projects" className="section_projects" >
-        <h2>Projetos</h2>
+        <h2 className="thick underline">Projetos</h2>
         <div className="projects-container">
           {projects.map((item) => {
             return (

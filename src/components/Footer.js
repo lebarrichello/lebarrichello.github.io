@@ -37,7 +37,7 @@ function Footer(props) {
             </div>
 
           </div>
-          {"Letícia Barrichello | 👩‍💻 "}
+          {"Desenvolvido por Letícia Barrichello | 👩‍💻 "}
         </footer>
       </>
     );

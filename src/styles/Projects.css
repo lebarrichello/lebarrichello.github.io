@@ -36,3 +36,12 @@
   align-items: center;
   justify-content: center;
 }
+
+.thick {
+  font-size: 2.7rem;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-color: var(--symbol-color);
+}
